@@ -1,0 +1,29 @@
+.osob-container {
+  @extend %align_center;
+}
+.osob-items {
+  display: block;
+  width: 270px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  .ocob-picture {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    background-color: $bgr-section-color;
+  }
+  p {
+    @include font($lh: 1.71);
+  }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.section-title-osob {
+  @include font($fw: 700);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: $title-text-color;
+}

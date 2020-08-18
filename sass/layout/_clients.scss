@@ -1,0 +1,71 @@
+.client {
+  padding-top: 132px;
+}
+.container-clients {
+  @extend %align_center;
+  &-item {
+    display: flex;
+    width: 170px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover {
+      border-color: $accent-color;
+    }
+  }
+}
+.svg-icon-logo1 {
+  width: 44px;
+  height: 49px;
+  @extend %icon_color;
+  .container-clients-item:hover & {
+    fill: $accent-color;
+  }
+}
+.svg-icon-logo2 {
+  width: 40px;
+  height: 52px;
+  @extend %icon_color;
+  .container-clients-item:hover & {
+    fill: $accent-color;
+  }
+}
+.svg-icon-logo3 {
+  width: 41px;
+  height: 42px;
+  @extend %icon_color;
+  .container-clients-item:hover & {
+    fill: $accent-color;
+  }
+}
+.svg-icon-logo4 {
+  width: 80px;
+  height: 42px;
+  @extend %icon_color;
+  .container-clients-item:hover & {
+    fill: $accent-color;
+  }
+}
+.svg-icon-logo5 {
+  width: 59px;
+  height: 42px;
+  @extend %icon_color;
+  .container-clients-item:hover & {
+    fill: $accent-color;
+  }
+}
+.svg-icon-logo6 {
+  width: 88.5px;
+  height: 45px;
+  @extend %icon_color;
+  .container-clients-item:hover & {
+    fill: $accent-color;
+  }
+}

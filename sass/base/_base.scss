@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+input {
+  font-family: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body,
+.backdrop {
+  background-color: $link-text-color;
+  color: $primary-text-color;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  /*font-size: 14px;
+  letter-spacing: 0.03em;*/
+}
+.list,
+.footer-mail,
+p {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img {
+  display: block;
+}

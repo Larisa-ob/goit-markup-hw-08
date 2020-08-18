@@ -1,0 +1,32 @@
+.comand {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 107px;
+  text-align: center;
+  align-items: center;
+  background-color: $bgr-section-color;
+}
+.bgr-comand {
+  @extend %align_center;
+  p {
+    @include font($lh: 1.19, $fs: 16px);
+    margin-bottom: 24px;
+  }
+}
+.container-comand-item {
+  width: 270px;
+  padding-bottom: 24px;
+  background-color: $link-text-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.section-title-comand {
+  @include font(500, 1.19, 16px);
+  margin-top: 30px;
+}

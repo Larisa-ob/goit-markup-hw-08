@@ -1,0 +1,49 @@
+.div-text-footer-write {
+  position: relative;
+  display: flex;
+  height: 86px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  .hero-button {
+    width: 195px;
+    @include font(700, 1.88, 16px, 0.06em);
+    padding: 10px 20px;
+    background-image: url("../images/svg/iconsend.svg");
+    background-repeat: no-repeat;
+    background-position: center right 7px;
+    background-size: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+.footer-mail {
+  max-width: 358px;
+  margin: 0;
+  padding: 15px;
+  padding-left: 16px;
+  margin-right: 12px;
+  background-color: #2f303a;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    border-color: $accent-color;
+    color: $link-text-color;
+    cursor: pointer;
+  }
+}
+.contact-form-label {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  @include font($lh: 1.25, $fs: 16px);
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.3);
+  .footer-mail:not(:placeholder-shown) & {
+    color: var(--primary-text-color);
+    border-color: $accent-color;
+  }
+}

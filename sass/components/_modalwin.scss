@@ -1,0 +1,177 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.modal-form {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  padding: 39px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  &-title {
+    margin-bottom: 30px;
+    text-align: start;
+    color: $title-text-color;
+    @include font(700, 1.15, 20px);
+  }
+}
+.modal-form-input-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+.modal-form-input {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 46px;
+  @include font($ls: 0.01em);
+  color: #757575;
+  background-color: #ffffff;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-color: $accent-color;
+    cursor: pointer;
+  }
+}
+.modal-form-label {
+  position: absolute;
+  top: 50%;
+  left: 46px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) opacity 250ms
+    cubic-beziercubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  .modal-form-input:focus + &,
+  .modal-form-input:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translate(-16px, -40px);
+  }
+}
+.icon-modal {
+  position: absolute;
+  overflow: visible;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: $title-text-color;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) opacity 250ms
+    cubic-beziercubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-form-input:hover ~ &,
+  .modal-form-input:focus ~ &,
+  .modal-form-input:not(:placeholder-shown) ~ & {
+    fill: $accent-color;
+  }
+}
+.modal-form-message {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 120px;
+  @include font($ls: 0.01em);
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  color: #757575;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid rgba(157, 164, 189, 0.4);
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-color: $accent-color;
+    cursor: pointer;
+  }
+}
+.modal-massange-label {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) opacity 250ms
+    cubic-beziercubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  .modal-form-message:focus + &,
+  .modal-form-message:not(:placeholder-shown) + & {
+    transform: translate(-16px, -40px);
+    color: $accent-color;
+  }
+}
+.modal-form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.modal-form-checkbox-label {
+  display: flex;
+  width: 425px;
+  padding-left: 11px;
+  align-items: center;
+  margin-bottom: 30px;
+  &-span {
+    @include font($lh: 1.71);
+    a {
+      color: $accent-color;
+    }
+  }
+}
+.modal-form-custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  .modal-form-checkbox:checked + & {
+    border-color: transparent;
+    background-color: $accent-color;
+    background-image: url(../images/svg/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
