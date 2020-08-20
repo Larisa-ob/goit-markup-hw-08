@@ -22,15 +22,7 @@
   border-radius: 4px;
   cursor: pointer;
 }
-/* логотип*/
-.logo {
-  color: $title-text-color;
-  font-family: "Raleway", sans-serif;
-  @include font(700, 1.19, 26px);
-  .web {
-    color: $accent-color;
-  }
-}
+
 /* Site-nav  */
 .site-nav {
   display: flex;
