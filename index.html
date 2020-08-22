@@ -19,9 +19,10 @@
         >
         <button
           type="button"
-          class="menu-btn"
+          class="menu-btn is-open"
           aria-expanded="false"
           aria-controls="menu-wrapper"
+          data-menu-button
         >
           <svg width="40" height="40px">
             <use
@@ -34,7 +35,7 @@
             ></use>
           </svg>
         </button>
-        <div class="list menu-wrapper">
+        <div class="list menu-wrapper is-open" data-menu>
           <nav class="navigation">
             <ul class="site-nav list link-nav">
               <li class="nav-list-link">
@@ -644,6 +645,7 @@
         <button type="submit" class="modal-form-btn">Отправить</button>
       </form>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
