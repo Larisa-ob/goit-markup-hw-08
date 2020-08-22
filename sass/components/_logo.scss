@@ -2,11 +2,11 @@
 .logo {
   color: $title-text-color;
   font-family: "Raleway", sans-serif;
-  @include font(700, 1.19, 26px);
+  @include font(700, 1.17, 24px);
   .web {
     color: $accent-color;
   }
-  .navigation & {
-    margin-left: 15px;
+  @media screen and (min-width: 1200px) {
+    @include font(700, 1.19, 26px);
   }
 }
