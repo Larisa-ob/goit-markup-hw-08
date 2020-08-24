@@ -42,12 +42,12 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
   .container .container {
     width: 480px;
+    margin: 0 auto;
   }
 }
 
@@ -250,7 +250,6 @@ img {
   }
   .menu-wrapper {
     position: absolute;
-    margin-left: -15px;
     height: 453px;
     width: 100%;
     top: 76px;
@@ -266,6 +265,7 @@ img {
     transform: translateY(0%);
   }
   .navigation {
+    /* position: relative;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,7 +311,7 @@ img {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    margin-right: 75px;
+    margin-right: 78px;
   }
   .nav-list-link:not(:last-child) {
     padding-right: 50px;
@@ -353,14 +353,12 @@ img {
 }
 
 .section {
-  padding-bottom: 0px;
+  padding-bottom: 60px;
 }
 
 .hero {
   max-width: 480px;
   height: 400px;
-  /*margin-left: auto;
-  margin-right: auto;*/
   padding-top: 118px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero_mob1x.jpg");
   background-repeat: no-repeat;
@@ -420,40 +418,57 @@ img {
 }
 
 /*.osob-container {
-  @extend %align_center;
+  display: flex;
+  align-items: center;
 }*/
 .osob-items {
-  max-width: 480px;
-  display: block;
-  text-align: left;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  /*&:not(:last-child) {
-    margin-right: 30px;
-  }*/
+  width: 450px;
 }
 
 .osob-items .ocob-picture {
-  padding: 25px 190px;
+  display: block;
+  height: 120px;
+  padding: 25px 100px;
+  align-items: center;
+  margin-bottom: 30px;
   background-color: #f5f4fa;
 }
 
-.osob-items p {
+.osob-items .ocob-picture p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
+.osob-items:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .section-title-osob {
+  text-align: center;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   margin-bottom: 20px;
   color: #212121;
+}
+
+@media screen and (min-width: 768px) {
+  .osob-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  .osob-items {
+    display: block;
+    width: 354px;
+    padding: 25px 140px;
+    text-align: start;
+    flex-basis: 50%;
+  }
 }
 
 .job-container {

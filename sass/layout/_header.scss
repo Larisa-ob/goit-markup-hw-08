@@ -4,7 +4,6 @@
 .header {
   position: relative;
 }
-
 .site-nav {
   @include font(500, 1.16, 18px, 0.02em);
   .link {
@@ -20,7 +19,6 @@
     text-align: center;
   }
 }
-
 .nav-list-link .curent::after {
   position: absolute;
   display: block;
@@ -101,7 +99,6 @@
   }
   .menu-wrapper {
     position: absolute;
-    margin-left: -15px;
     height: 453px;
     width: 100%;
     top: 76px;
@@ -120,6 +117,7 @@
     transform: translateY(0%);
   }
   .navigation {
+    /* position: relative;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +159,7 @@
   .site-nav {
     display: flex;
     @include font(500, 1.14, 14px, 0.02em);
-    margin-right: 75px;
+    margin-right: 78px;
   }
   .nav-list-link:not(:last-child) {
     padding-right: 50px;

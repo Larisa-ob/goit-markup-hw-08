@@ -42,12 +42,12 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
   .container .container {
     width: 480px;
+    margin: 0 auto;
   }
 }
 
@@ -250,7 +250,6 @@ img {
   }
   .menu-wrapper {
     position: absolute;
-    margin-left: -15px;
     height: 453px;
     width: 100%;
     top: 76px;
@@ -266,6 +265,7 @@ img {
     transform: translateY(0%);
   }
   .navigation {
+    /* position: relative;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,7 +311,7 @@ img {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    margin-right: 75px;
+    margin-right: 78px;
   }
   .nav-list-link:not(:last-child) {
     padding-right: 50px;

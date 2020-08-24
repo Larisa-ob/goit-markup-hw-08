@@ -1,29 +1,47 @@
+@media screen and (min-width: 480px) {
+}
 /*.osob-container {
-  @extend %align_center;
+  display: flex;
+  align-items: center;
 }*/
 .osob-items {
-  max-width: 480px;
-  display: block;
-  text-align: left;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  width: 450px;
   .ocob-picture {
-    padding: 25px 190px;
+    display: block;
+    height: 120px;
+    padding: 25px 100px;
+    align-items: center;
+    margin-bottom: 30px;
     background-color: $bgr-section-color;
+    p {
+      @include font($lh: 1.71);
+    }
   }
-  p {
-    @include font($lh: 1.71);
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
-  /*&:not(:last-child) {
-    margin-right: 30px;
-  }*/
 }
+
 .section-title-osob {
-  @include font($fw: 700);
+  text-align: center;
   text-transform: uppercase;
+  @include font($fw: 700);
   margin-bottom: 20px;
   color: $title-text-color;
 }
 @media screen and (min-width: 768px) {
+  .osob-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  .osob-items {
+    display: block;
+    width: 354px;
+    padding: 25px 140px;
+    text-align: start;
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
 }
