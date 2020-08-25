@@ -1,8 +1,7 @@
 .section {
   padding-bottom: 60px;
 }
-.hero {
-  max-width: 480px;
+.hero .container {
   height: 400px;
   padding-top: 118px;
   background-image: linear-gradient(
@@ -32,8 +31,7 @@
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .hero {
-    max-width: 768px;
+  .hero .container {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -43,9 +41,8 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
+  .hero .container {
     height: 600px;
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(

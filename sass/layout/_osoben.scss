@@ -1,15 +1,17 @@
-@media screen and (min-width: 480px) {
-}
 /*.osob-container {
   display: flex;
-  align-items: center;
+  align-items: center;*/
+/*.osob-container {
+  @extend %align_center;
 }*/
+
 .osob-items {
-  width: 450px;
+  display: block;
+  text-align: center;
+  width: 100%;
   .ocob-picture {
-    display: block;
+    width: 100%;
     height: 120px;
-    padding: 25px 100px;
     align-items: center;
     margin-bottom: 30px;
     background-color: $bgr-section-color;
@@ -27,21 +29,29 @@
   text-transform: uppercase;
   @include font($fw: 700);
   margin-bottom: 20px;
-  color: $title-text-color;
+  /* color: $title-text-color;*/
 }
 @media screen and (min-width: 768px) {
   .osob-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: space-between;
   }
   .osob-items {
-    display: block;
-    width: 354px;
-    padding: 25px 140px;
+    width: 50%;
     text-align: start;
-    flex-basis: 50%;
+    .ocob-picture {
+      width: 50%;
+      height: 120px;
+      align-items: center;
+      margin-bottom: 30px;
+      background-color: $bgr-section-color;
+    }
   }
 }
+
 @media screen and (min-width: 1200px) {
+  /*.osob-container {
+    @extend %align_center;
+  }*/
 }
