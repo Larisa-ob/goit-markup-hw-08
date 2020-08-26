@@ -1,19 +1,11 @@
-/*.osob-container {
-  display: flex;
-  align-items: center;*/
-/*.osob-container {
-  @extend %align_center;
-}*/
-
 .osob-items {
   display: block;
   text-align: center;
-  width: 100%;
   .ocob-picture {
     width: 100%;
     height: 120px;
     align-items: center;
-    margin-bottom: 30px;
+    padding: 25px 100px;
     background-color: $bgr-section-color;
     p {
       @include font($lh: 1.71);
@@ -23,13 +15,12 @@
     margin-bottom: 30px;
   }
 }
-
 .section-title-osob {
   text-align: center;
   text-transform: uppercase;
   @include font($fw: 700);
   margin-bottom: 20px;
-  /* color: $title-text-color;*/
+  color: $title-text-color;
 }
 @media screen and (min-width: 768px) {
   .osob-container {
@@ -37,21 +28,40 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   .osob-items {
     width: 50%;
-    text-align: start;
-    .ocob-picture {
-      width: 50%;
-      height: 120px;
-      align-items: center;
-      margin-bottom: 30px;
-      background-color: $bgr-section-color;
-    }
+    text-align: left;
+    justify-content: center;
+    align-items: center;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  /*.osob-container {
-    @extend %align_center;
-  }*/
+  .osob-container {
+    align-items: center;
+    margin: 0;
+  }
+  .osob-items {
+    width: 270px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    .ocob-picture {
+      width: 270px;
+      height: 120px;
+    }
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+  .section-title-osob {
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
 }
