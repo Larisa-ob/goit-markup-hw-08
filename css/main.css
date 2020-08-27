@@ -56,8 +56,8 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -422,7 +422,7 @@ img {
 }
 
 .osob-items .ocob-picture {
-  width: 100%;
+  width: 99%;
   height: 120px;
   align-items: center;
   padding: 25px 100px;
@@ -452,21 +452,26 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .osob-container {
+  .container .osob-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .osob-items {
-    width: 50%;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
+    width: calc((100%-5px * 2) / 2);
+    margin: 5px;
+    /* &:not(:nth-child(2n)) {
+      margin-right: 10px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }*/
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .osob-container {
+  .container .osob-container {
+    flex-wrap: nowrap;
     align-items: center;
     margin: 0;
   }
@@ -481,7 +486,7 @@ img {
     height: 120px;
   }
   .osob-items:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 5px;
   }
   .osob-items:last-child {
     margin-bottom: 30px;

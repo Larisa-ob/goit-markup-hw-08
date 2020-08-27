@@ -1,8 +1,20 @@
+.osob-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0;
+  }
+}
 .osob-items {
   display: block;
   text-align: center;
   .ocob-picture {
-    width: 100%;
+    width: 99%;
     height: 120px;
     align-items: center;
     padding: 25px 100px;
@@ -14,34 +26,11 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-}
-.section-title-osob {
-  text-align: center;
-  text-transform: uppercase;
-  @include font($fw: 700);
-  margin-bottom: 20px;
-  color: $title-text-color;
-}
-@media screen and (min-width: 768px) {
-  .osob-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 5px * 2) / 2);
+    margin: 5px;
   }
-
-  .osob-items {
-    width: 50%;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .osob-container {
-    align-items: center;
-    margin: 0;
-  }
-  .osob-items {
+  @media screen and (min-width: 1200px) {
     width: 270px;
     text-align: left;
     justify-content: center;
@@ -51,13 +40,20 @@
       height: 120px;
     }
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 5px;
     }
     &:last-child {
       margin-bottom: 30px;
     }
   }
-  .section-title-osob {
+}
+.section-title-osob {
+  text-align: center;
+  text-transform: uppercase;
+  @include font($fw: 700);
+  margin-bottom: 20px;
+  color: $title-text-color;
+  @media screen and (min-width: 1200px) {
     text-align: left;
     font-weight: 700;
     line-height: 1.14;
