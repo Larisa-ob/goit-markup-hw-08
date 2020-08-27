@@ -37,8 +37,21 @@
   align-items: center;
   background-color: $bgr-section-color;
 }
-.bgr-comand .container-comand-item .container {
+.bgr-comand {
   display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    /*@extend %align_center;*/
+    p {
+      @include font($lh: 1.19, $fs: 16px);
+      margin-bottom: 24px;
+    }
+  }
 }
 .container-comand-item {
   background-color: $link-text-color;
@@ -46,15 +59,30 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
-  /* &:not(:last-child) {
-    margin-right: 30px;
-  }*/
-  .section-title-comand {
-    text-align: center;
-    color: $title-text-color;
-    @include font(500, 1.19, 16px);
+  @media screen and (min-width: 768px) {
+    width: 45%;
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    padding-bottom: 24px;
+    .container-comand-item:last-child {
+      margin-right: 0px;
+    }
   }
 }
+/* &:not(:last-child) {
+    margin-right: 30px;
+  }*/
+.section-title-comand {
+  text-align: center;
+  color: $title-text-color;
+  @include font(500, 1.19, 16px);
+  @media screen and (min-width: 1200px) {
+    margin-top: 30px;
+  }
+}
+
 .container-comand-item img {
   width: 100%;
 }
