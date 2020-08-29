@@ -1,25 +1,50 @@
 .client {
-  padding-top: 132px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 132px;
+  }
 }
 .container-clients {
-  @extend %align_center;
-  &-item {
-    display: flex;
-    width: 170px;
-    height: 90px;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-    &:hover {
-      border-color: $accent-color;
-    }
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px -15px;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
   }
+}
+.container-clients-item {
+  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+    magin: 0;
+    height: 90px;
+  }
+}
+.container-clients-item:not(:last-child) {
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+  }
+}
+.container-clients-item:hover {
+  border-color: $accent-color;
+}
+.container-clients-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .svg-icon-logo1 {
   width: 44px;

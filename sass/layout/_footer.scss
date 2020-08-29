@@ -1,32 +1,52 @@
 /* footer*/
-.logo-footer {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+.logo-footer > .container {
   background-color: #2f303a;
-  .container {
+  padding-top: 60px;
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: row;
     align-items: baseline;
-    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.logo-footer {
+  display: block;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2f303a;
   }
 }
 .container-footer-adress {
-  margin-top: 60px;
-  margin-bottom: 51px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   & a {
     text-decoration: none;
   }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    margin-left: 60px;
+    text-align: center;
+  }
 }
 .logo-text-footer {
-  display: inline-block;
-  margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
   @include font(700, 1.19, 26px);
   color: $link-text-color;
+  margin-bottom: 20px;
   .web {
     color: $accent-color;
+  }
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    margin-bottom: 20px;
   }
 }
 .footer-adress {
@@ -43,14 +63,27 @@
   }
 }
 .div-text-footer {
-  text-align: start;
+  text-align: center;
   color: $link-text-color;
-  b {
-    display: inline-block;
-    margin-bottom: 20px;
-    @include font($fw: 700);
-    text-transform: uppercase;
+  padding-bottom: 60px;
+  text-align: center;
+  width: 450px;
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    margin-left: 185px;
+    text-align: center;
   }
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    margin: 60px auto 0;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+.div-text-footer b {
+  display: inline-block;
+  margin-bottom: 20px;
+  @include font($fw: 700);
+  text-transform: uppercase;
 }
 .text-footer {
   color: $link-text-color;
