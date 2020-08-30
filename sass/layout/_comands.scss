@@ -1,6 +1,10 @@
 .comand {
-  padding-top: 60px;
   padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: $bgr-section-color;
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 .bgr-comand {
   display: flex;

@@ -74,7 +74,6 @@
     position: relative;
     background-color: transparent;
     border: none;
-    z-index: 100;
     &.is-open {
       .icon-close_bth {
         display: block;
@@ -98,6 +97,7 @@
     display: none;
   }
   .menu-wrapper {
+    z-index: 100;
     position: absolute;
     height: 453px;
     width: 100%;

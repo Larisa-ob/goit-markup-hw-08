@@ -247,7 +247,6 @@ img {
     position: relative;
     background-color: transparent;
     border: none;
-    z-index: 100;
   }
   .menu-btn.is-open .icon-close_bth {
     display: block;
@@ -269,6 +268,7 @@ img {
     display: none;
   }
   .menu-wrapper {
+    z-index: 100;
     position: absolute;
     height: 453px;
     width: 100%;
@@ -570,8 +570,15 @@ img {
 }
 
 .comand {
-  padding-top: 60px;
   padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: #f5f4fa;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .comand {
+    margin-bottom: 60px;
+  }
 }
 
 .bgr-comand {
@@ -688,6 +695,10 @@ img {
 .svg-icon-logo1, .svg-icon-logo2, .svg-icon-logo3, .svg-icon-logo4, .svg-icon-logo5, .svg-icon-logo6 {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client {
+  padding-top: 60px;
 }
 
 @media screen and (min-width: 1200px) {
