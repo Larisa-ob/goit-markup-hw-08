@@ -48,14 +48,13 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -119,6 +118,8 @@ img {
 
 .hero-button,
 .footer-button {
+  width: 200px;
+  height: 50px;
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -371,13 +372,20 @@ img {
   }
 }
 
-.hero .container {
+.hero {
   height: 400px;
   padding-top: 118px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero_mob1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+  }
 }
 
 .hero-title {
@@ -388,7 +396,16 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+  }
 }
 
 .hero button {
@@ -398,35 +415,9 @@ img {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
-  padding: 10px 32px 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .hero .container {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero_tab1x.jpg");
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero .container {
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero_opt.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .hero-title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.03em;
-    margin-bottom: 20px;
-  }
 }
 
 .osob-container {
@@ -578,38 +569,6 @@ img {
   }
 }
 
-/*.comand {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 94px;
-  padding-bottom: 107px;
-  text-align: center;
-  align-items: center;
-  background-color: $bgr-section-color;
-}
-.bgr-comand {
-  @extend %align_center;
-  p {
-    @include font($lh: 1.19, $fs: 16px);
-    margin-bottom: 24px;
-  }
-}
-.container-comand-item {
-  width: 270px;
-  padding-bottom: 24px;
-  background-color: $link-text-color;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 0px 0px 4px 4px;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-.section-title-comand {
-  @include font(500, 1.19, 16px);
-  margin-top: 30px;
-}*/
 .comand {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -619,7 +578,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
   background-color: #f5f4fa;
 }
 
@@ -629,9 +588,10 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-bottom: 24px;
+  text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .bgr-comand {
     margin: 0px -15px;
   }
@@ -645,17 +605,16 @@ img {
 }
 
 .container-comand-item {
-  padding-bottom: 24px;
+  width: 100%;
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) and (max-width: 1999px) {
   .container-comand-item {
-    width: 50%;
-    margin: 15px;
+    width: calc((100% - 30px) / 2);
   }
 }
 
@@ -908,6 +867,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container-footer-adress {
+    margin-right: 69px;
+  }
+}
+
 .logo-text-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -947,33 +912,44 @@ img {
   color: #2196f3;
 }
 
-.div-text-footer {
+@media screen and (min-width: 1200px) {
+  .div-text-footer {
+    margin-right: 69px;
+  }
+}
+
+.div-text-footer,
+.div-text-mail {
   text-align: center;
   color: #ffffff;
   padding-bottom: 60px;
   text-align: center;
-  width: 450px;
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
-  .div-text-footer {
+  .div-text-footer,
+  .div-text-mail {
+    width: 450px;
     margin-left: 185px;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
-  .div-text-footer {
+  .div-text-footer,
+  .div-text-mail {
     margin: 60px auto 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .div-text-footer {
+  .div-text-footer,
+  .div-text-mail {
     text-align: start;
   }
 }
 
+.div-text-mail b,
 .div-text-footer b {
   display: inline-block;
   margin-bottom: 20px;
@@ -1006,26 +982,26 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
   .div-text-footer-write {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: space-between;
+    align-items: start;
   }
 }
 
 .footer-button {
-  display: block;
-  margin: 0 auto;
-  width: 195px;
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  padding: 10px 20px;
   background-image: url("../images/svg/iconsend.svg");
   background-repeat: no-repeat;
   background-position: center right 7px;
@@ -1033,11 +1009,11 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-mail {
   width: 100%;
-  margin-bottom: 20px;
   padding: 15px;
   padding-left: 16px;
   background-color: #2f303a;
@@ -1052,9 +1028,17 @@ img {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
-  .footer-mail:focus, .footer-mail:hover {
+@media screen and (max-width: 1999px) {
+  .footer-mail {
     width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-mail {
+    width: 360px;
+    margin-right: 8px;
   }
 }
 

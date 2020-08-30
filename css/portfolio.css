@@ -48,14 +48,13 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -119,6 +118,8 @@ img {
 
 .hero-button,
 .footer-button {
+  width: 200px;
+  height: 50px;
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -581,6 +582,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container-footer-adress {
+    margin-right: 69px;
+  }
+}
+
 .logo-text-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -620,33 +627,44 @@ img {
   color: #2196f3;
 }
 
-.div-text-footer {
+@media screen and (min-width: 1200px) {
+  .div-text-footer {
+    margin-right: 69px;
+  }
+}
+
+.div-text-footer,
+.div-text-mail {
   text-align: center;
   color: #ffffff;
   padding-bottom: 60px;
   text-align: center;
-  width: 450px;
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
-  .div-text-footer {
+  .div-text-footer,
+  .div-text-mail {
+    width: 450px;
     margin-left: 185px;
     text-align: center;
   }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
-  .div-text-footer {
+  .div-text-footer,
+  .div-text-mail {
     margin: 60px auto 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .div-text-footer {
+  .div-text-footer,
+  .div-text-mail {
     text-align: start;
   }
 }
 
+.div-text-mail b,
 .div-text-footer b {
   display: inline-block;
   margin-bottom: 20px;
@@ -679,26 +697,26 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
   .div-text-footer-write {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: space-between;
+    align-items: start;
   }
 }
 
 .footer-button {
-  display: block;
-  margin: 0 auto;
-  width: 195px;
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  padding: 10px 20px;
   background-image: url("../images/svg/iconsend.svg");
   background-repeat: no-repeat;
   background-position: center right 7px;
@@ -706,11 +724,11 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-mail {
   width: 100%;
-  margin-bottom: 20px;
   padding: 15px;
   padding-left: 16px;
   background-color: #2f303a;
@@ -725,9 +743,17 @@ img {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
-  .footer-mail:focus, .footer-mail:hover {
+@media screen and (max-width: 1999px) {
+  .footer-mail {
     width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-mail {
+    width: 360px;
+    margin-right: 8px;
   }
 }
 
