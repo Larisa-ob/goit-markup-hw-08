@@ -63,7 +63,7 @@
     margin: 0 auto;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $border-header-color;
   }
   .header-container {
     display: flex;
@@ -145,7 +145,7 @@
   .header {
     padding-top: 21px;
     padding-bottom: 21px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $border-header-color;
   }
   .header-container {
     display: flex;

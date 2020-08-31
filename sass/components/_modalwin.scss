@@ -17,7 +17,7 @@
   top: 50%;
   left: 50%;
   padding: 39px;
-  background-color: #fff;
+  background-color: $link-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -40,10 +40,9 @@
   height: 40px;
   padding-left: 46px;
   @include font($ls: 0.01em);
-  color: #757575;
-  background-color: #ffffff;
+  color: $primary-text-color;
+  background-color: $link-text-color;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   &:hover {
     border-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -96,8 +95,8 @@
   @include font($ls: 0.01em);
   margin-bottom: 20px;
   padding: 12px 16px;
-  color: #757575;
-  background-color: #ffffff;
+  color: $primary-text-color;
+  background-color: $link-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -157,8 +156,8 @@
   width: 16px;
   height: 16px;
   margin-right: 5px;
-  background-color: #ffffff;
-  border: 1px solid #000;
+  background-color: $link-text-color;
+  border: 1px solid $black-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;

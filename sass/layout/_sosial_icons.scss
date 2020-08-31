@@ -12,7 +12,7 @@
 .container-sosial-comand-svg {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: $sosial_icon-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .container-sosial-comand-link:hover & {
     fill: $link-text-color;
